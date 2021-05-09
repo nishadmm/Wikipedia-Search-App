@@ -1,0 +1,432 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  display: flex;
+  align-items: center;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+body main,
+html main {
+  min-height: calc(100vh - 60px);
+  width: 80%;
+  /* Loader */
+}
+
+body main .logo,
+html main .logo {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+body main .logo .blue,
+html main .logo .blue {
+  color: #4885ed;
+}
+
+body main .logo .red,
+html main .logo .red {
+  color: #db3236;
+}
+
+body main .logo .yellow,
+html main .logo .yellow {
+  color: #ffc107;
+}
+
+body main .logo .green,
+html main .logo .green {
+  color: #3cba54;
+}
+
+body main .logo .exclaim,
+html main .logo .exclaim {
+  display: inline-block;
+  transform: rotate(15deg);
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .logo .exclaim,
+  html main .logo .exclaim {
+    font-size: 7rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body main .logo,
+  html main .logo {
+    font-size: 5rem;
+    letter-spacing: -10px;
+  }
+}
+
+body main .searchBar,
+html main .searchBar {
+  width: 100%;
+}
+
+body main .searchBar #searchForm,
+html main .searchBar #searchForm {
+  width: 100%;
+  display: flex;
+  padding: 4px 12px 4px 15px;
+  border: 2px solid #d6d6d6;
+  border-radius: 500px;
+}
+
+body main .searchBar #searchForm input[type="text"],
+html main .searchBar #searchForm input[type="text"] {
+  outline: none;
+  border: none;
+  flex-grow: 1;
+  min-width: 150px;
+  letter-spacing: 2px;
+  font-size: 1.34rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .searchBar #searchForm input[type="text"],
+  html main .searchBar #searchForm input[type="text"] {
+    font-size: 1.7rem;
+  }
+}
+
+body main .searchBar #searchForm .button,
+html main .searchBar #searchForm .button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  min-height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .searchBar #searchForm .button,
+  html main .searchBar #searchForm .button {
+    font-size: 2rem;
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+body main .searchBar #searchForm .searchBtn,
+html main .searchBar #searchForm .searchBtn {
+  color: #4885ed;
+}
+
+body main .searchBar #searchForm .searchBtn:hover i, body main .searchBar #searchForm .searchBtn:focus i,
+html main .searchBar #searchForm .searchBtn:hover i,
+html main .searchBar #searchForm .searchBtn:focus i {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  color: #3cba54;
+}
+
+body main .searchBar #searchForm .clearBtn,
+html main .searchBar #searchForm .clearBtn {
+  color: #70757a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: thin solid #b9b9b9;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .searchBar #searchForm .clearBtn,
+  html main .searchBar #searchForm .clearBtn {
+    padding-right: 30px;
+  }
+}
+
+body main .searchBar #searchForm .clearBtn:hover i, body main .searchBar #searchForm .clearBtn:focus i,
+html main .searchBar #searchForm .clearBtn:hover i,
+html main .searchBar #searchForm .clearBtn:focus i {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  color: #db3236;
+}
+
+body main .searchBar #searchForm .none,
+html main .searchBar #searchForm .none {
+  display: none;
+}
+
+body main .searchBar #searchForm .flex,
+html main .searchBar #searchForm .flex {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .searchBar #searchForm,
+  html main .searchBar #searchForm {
+    padding: 8px 15px 8px 30px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  body main .searchBar #searchForm,
+  html main .searchBar #searchForm {
+    padding: 12px 20px 12px 38px;
+  }
+}
+
+body main .searchBar #searchForm:hover, body main .searchBar #searchForm:focus-within,
+html main .searchBar #searchForm:hover,
+html main .searchBar #searchForm:focus-within {
+  box-shadow: 0 2px 5px 2px #d6d6d6;
+}
+
+body main #loader-container,
+html main #loader-container {
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  display: none;
+}
+
+body main #loader,
+html main #loader {
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+
+body main #loader span,
+html main #loader span {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+}
+
+body main #loader span:first-child,
+html main #loader span:first-child {
+  background-color: #ff00b3;
+  animation: box1 2s infinite ease-in-out alternate-reverse;
+}
+
+body main #loader span:nth-child(2),
+html main #loader span:nth-child(2) {
+  background-color: #00e1ff;
+  transform: translate(60px, 0px);
+  animation: box2 2s infinite ease-in-out alternate-reverse;
+}
+
+body main #loader span:nth-child(3),
+html main #loader span:nth-child(3) {
+  background-color: #ff0000;
+  transform: translate(60px, 60px);
+  animation: box3 2s infinite ease-in-out alternate-reverse;
+}
+
+body main #loader span:nth-child(4),
+html main #loader span:nth-child(4) {
+  background-color: #9dff00;
+  transform: translate(0px, 60px);
+  animation: box4 2s infinite ease-in-out alternate-reverse;
+}
+
+@keyframes box1 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(0px, 60px);
+  }
+  50% {
+    transform: translate(60px, 60px);
+  }
+  75% {
+    transform: translate(60px, 0px);
+  }
+}
+
+@keyframes box2 {
+  0% {
+    transform: translate(60px, 0px);
+  }
+  25% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 60px);
+  }
+  75% {
+    transform: translate(60px, 60px);
+  }
+}
+
+@keyframes box3 {
+  0% {
+    transform: translate(60px, 60px);
+  }
+  25% {
+    transform: translate(60px, 0px);
+  }
+  50% {
+    transform: translate(0px, 0px);
+  }
+  75% {
+    transform: translate(0px, 60px);
+  }
+}
+
+@keyframes box4 {
+  0% {
+    transform: translate(0px, 60px);
+  }
+  25% {
+    transform: translate(60px, 60px);
+  }
+  50% {
+    transform: translate(60px, 0px);
+  }
+  75% {
+    transform: translate(0px, 0px);
+  }
+}
+
+body main #stats,
+html main #stats {
+  color: #70757a;
+  padding: 10px 0;
+  font-size: 1rem;
+  text-align: left;
+  width: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+  body main #stats,
+  html main #stats {
+    font-size: 1.3rem;
+    margin: 0 auto;
+  }
+}
+
+body main .results,
+html main .results {
+  width: 100%;
+}
+
+body main .results .resultItem,
+html main .results .resultItem {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.25re 0;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .results .resultItem,
+  html main .results .resultItem {
+    padding: 0.5rem 0;
+  }
+}
+
+body main .results .resultItem .resultTitle,
+html main .results .resultItem .resultTitle {
+  margin: 0.5rem 0;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .results .resultItem .resultTitle,
+  html main .results .resultItem .resultTitle {
+    margin: 0.8rem 0;
+  }
+}
+
+body main .results .resultItem .resultTitle a,
+html main .results .resultItem .resultTitle a {
+  text-decoration: none;
+  color: #1a0dab;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .results .resultItem .resultTitle a,
+  html main .results .resultItem .resultTitle a {
+    font-size: 1.9rem;
+  }
+}
+
+body main .results .resultItem .resultTitle a:hover,
+html main .results .resultItem .resultTitle a:hover {
+  text-decoration: underline;
+}
+
+body main .results .resultItem .resultTitle a:visited,
+html main .results .resultItem .resultTitle a:visited {
+  color: #609;
+}
+
+body main .results .resultItem .resultTitle a:focus,
+html main .results .resultItem .resultTitle a:focus {
+  color: #000;
+}
+
+body main .results .resultItem .resultContents,
+html main .results .resultItem .resultContents {
+  display: flex;
+  width: 100%;
+}
+
+body main .results .resultItem .resultContents .resultImage img,
+html main .results .resultItem .resultContents .resultImage img {
+  margin-right: 0.5rem;
+}
+
+body main .results .resultItem .resultContents .resultText,
+html main .results .resultItem .resultContents .resultText {
+  font-size: 14px;
+  line-height: 20px;
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 768px) {
+  body main .results .resultItem .resultContents .resultText,
+  html main .results .resultItem .resultContents .resultText {
+    font-size: 1.5rem;
+    line-height: 28px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body main .results,
+  html main .results {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+body footer,
+html footer {
+  margin-top: 1rem;
+  color: #70757a;
+  min-height: 60px;
+}
+/*# sourceMappingURL=main.css.map */
